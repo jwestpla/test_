@@ -1,6 +1,8 @@
-from tkinter import *
+import tkinter as tk
 
-main = Tk()
+main = tk.Tk()
+greeting = tk.Label(text="Hello tkinter!")
+greeting.pack()
 
 
 main.mainloop()
