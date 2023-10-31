@@ -8,20 +8,11 @@ def firstcommand():
 root = tk.Tk()
 root.geometry("800x600")
 
-
-# Define working directory
-realwd = Path("Bilder/Romnes1.png")
-
-# Create a canvas for the image
-canvas = tk.Canvas(root, width=800, height=600)
+canvas = tk.Canvas(width=800, height=600, highlightthickness=5, highlightbackground="black")
 canvas.pack()
 
-# open image with TIL, resize it and convert to a tkinter object
-fileplacement = Image.open(realwd)
-newbackgroundimage = fileplacement.resize((800,600))
-pic = ImageTk.PhotoImage(newbackgroundimage)
+button1 = tk.Button(text="Button 1")
 
-# Create the image and place it in the canvas
-canvas.create_image(0, 0, image=pic, anchor="nw")
+canvas.create_window(100, 300, window=button1)
 
 root.mainloop()
